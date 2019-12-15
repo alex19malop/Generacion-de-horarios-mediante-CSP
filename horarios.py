@@ -83,7 +83,7 @@ problem.addConstraint(luciaS_andreaE,('Lucia1','Lucia2','Andrea1','Andrea2'))
 
 # a = juan1, b = juan2, c = N1  y d = N2
 def madrugarNaturales(a,b,c,d):
-	if (a=='N' or b=='N') and ((c==1 and c==10) or (d==1 and d==10)):
+	if (a=='N' or b=='N') and ((c==1 or c==10) or (d==1 or d==10)):
 		return False
 	else:
 		return True
@@ -92,12 +92,12 @@ problem.addConstraint(madrugarNaturales,('Juan1','Juan2','N1','N2'))
 
 # a = juan1, b = juan2, c = S1  y d = S2
 def madrugarSociales(a,b,c,d):
-	if (a=='S' or b=='S') and ((c==1 and c==10) or (d==1 and d==10)):
+	if (a=='S' or b=='S') and ((c==1 or c==10) or (d==1 or d==10)):
 		return False
 	else:
 		return True
 
-problem.addConstraint(madrugarNaturales,('Juan1','Juan2','S1','S2'))
+problem.addConstraint(madrugarSociales,('Juan1','Juan2','S1','S2'))
 
 
 
